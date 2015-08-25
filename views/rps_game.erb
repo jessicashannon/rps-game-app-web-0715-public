@@ -1,1 +1,17 @@
+<html>
 <h1>WELCOME TO ROCK PAPER SCISSORS</h1>
+
+<p> Your move was: <%= @game.play %></p>
+
+<p> The computer's move was: <%= @game.computer_play %> </p>
+
+<p> You
+        <% if @game.tied? %>
+        <%= "tied!" %>
+        <% elsif @game.lost? %>
+        <%= "lost." %>
+        <% else %>
+        <%= "won!" %>
+        <% end %>  
+
+</html>
